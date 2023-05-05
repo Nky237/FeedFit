@@ -8,6 +8,9 @@ width: 90%;
 margin: auto;
 margin: 40px auto;
 padding: 40px 0;
+h1{
+    text-align: center;
+}
 `
 export const Wrap = styled(Wrapper) `
    p{
@@ -120,4 +123,33 @@ justify-content: space-around;
 line-height: 30px;
 margin-top: 0;
 padding: 30px 0;
+`
+export const Form =styled.form`
+width: 80%;
+input, select{
+    height: 50px;
+    width: 480px;
+    padding: 0 20px;
+}
+button{
+    border-radius: 8px;
+    width: 480px;
+    margin-top: 20px;
+}
+label{
+    padding-bottom: 10px;
+}
+`
+export const Smal = styled.div`
+select{
+    width: 80px;
+    margin-left: 20px;
+}
+
+
+`
+export const Column = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 `

@@ -23,7 +23,7 @@ const Home: React.FC = () => {
             <Wrap>
             <Flex>
             <div>
-                <h1>Lets Begin Your <br/> </h1>
+                <h2>Lets Begin Your <br/> </h2>
                 <p>Achieve your weight goals and improve your
                     overall health with our customized diet plans
                 tailored to your specific needs.</p>

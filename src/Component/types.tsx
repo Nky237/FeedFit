@@ -7,3 +7,7 @@ export interface Props {
 export interface Pic{
     image:string
 }
+export interface Formy{
+    text: number
+    lab: string
+}
