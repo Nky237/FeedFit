@@ -1,0 +1,123 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+width: 100%;
+`
+export const Wrapper = styled.div`
+width: 90%;
+margin: auto;
+margin: 40px auto;
+padding: 40px 0;
+`
+export const Wrap = styled(Wrapper) `
+   p{
+    line-height: 32.78px;
+   }
+   
+    img{
+        width: 70%;
+        height: 522px;
+    }
+`
+export const Button = styled.button `
+    background-color: #74DDA0;
+    border-radius: 16px;
+    width: 144px;
+    padding: 8px;
+    color: white;
+    height: 48px;
+    border: none;
+`
+export const Center = styled.div`
+/* width: 50%; */
+margin: auto;
+text-align: center;
+`
+export const Input = styled.input`
+width: 670px;
+height: 48px;
+border-radius: 16px;
+border: 1px solid #74DDA0;
+color: #74DDA0;
+padding: 0 20px;
+
+
+`
+export const Flex = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+ @media (max-width: 768px) {
+    flex-direction: column;
+ }
+
+`
+export const Ash = styled.div`
+    background-color: #F7F7F7;
+`
+export const Figure  = styled.div`
+    width: 400px;
+    height: 440px;
+    line-height:27.32px;
+    text-align: center;
+
+
+    img{
+    width: 400px;
+    height: 346px;
+    background-color: #DEF7E8;
+    object-fit: cover;
+    padding: 40px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    }
+
+
+`
+export const Small = styled(Flex)`
+justify-content: center;
+align-items: center;
+gap: 50px;
+text-align: center;
+line-height: 35.22px;
+    div{
+        width: 40%;
+    }
+    img{
+        height: 300px;
+        width: 360px;
+    }
+`
+export const LightGreen = styled.div`
+background-color: #58D68D;
+color: white;
+ div{
+    margin-bottom: 0;
+    justify-content: space-between;
+    line-height: 32.78px;
+ }
+ input, button{
+    height: 49px;
+    border: none;
+
+ }
+ button{
+    width: 91px;
+ }
+ input{
+    width: 230px;
+    padding: 0 30px;
+ }
+`
+
+export const Footer = styled(Flex)`
+background-color: #0A9C48;
+color: white;
+justify-content: space-around;
+line-height: 30px;
+margin-top: 0;
+padding: 30px 0;
+`
