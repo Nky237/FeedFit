@@ -153,3 +153,33 @@ export const Column = styled.div`
     flex-direction: column;
     margin-top: 20px;
 `
+export const Conto = styled.div`
+height: 100vh;
+width: 100%;
+background-color: rgba(0,0,0,0.5);
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+align-items: center;
+justify-content:center;
+background-position: fixed;
+
+small{
+    float: right;
+    cursor: pointer;
+    font-size: 36px;
+    color: red;
+    padding-right: 12px;
+}
+
+div{
+    background: white;
+    color: black;
+    height: 300px;
+    width:60%;
+    overflow: auto;
+
+
+}
+`
