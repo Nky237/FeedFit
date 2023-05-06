@@ -30,11 +30,14 @@ export const Button = styled.button `
     color: white;
     height: 48px;
     border: none;
+    cursor: pointer;
+
 `
 export const Center = styled.div`
 /* width: 50%; */
 margin: auto;
 text-align: center;
+
 `
 export const Input = styled.input`
 width: 670px;
@@ -139,12 +142,32 @@ button{
 label{
     padding-bottom: 10px;
 }
+@media(max-width: 560px){
+    width: 90%;
+    input, select{
+        width: 450px;
+    }
+    button{
+      width:  400px;
+    }
+    }
 `
 export const Smal = styled.div`
 select{
     width: 80px;
     margin-left: 20px;
 }
+@media(max-width: 560px){
+ input{
+        width: 330px;
+    }
+    select{
+
+        margin-left: 10px;
+    }
+    }
+
+
 
 
 `
@@ -164,13 +187,16 @@ display: flex;
 align-items: center;
 justify-content:center;
 background-position: fixed;
+text-align: center;
 
 small{
-    float: right;
+    justify-content: flex-end;
     cursor: pointer;
     font-size: 36px;
     color: red;
     padding-right: 12px;
+    display: flex;
+    
 }
 
 div{
@@ -179,7 +205,26 @@ div{
     height: 300px;
     width:60%;
     overflow: auto;
+    display: flex;
 
+    flex-direction: column;
 
 }
+P{
+    width: 100%;
+}
+`
+export const Table = styled.table`
+border: 3px solid #58D68D;
+padding: 10px;
+border-collapse: collapse;
+td{
+    border: 3px solid #58D68D;
+    padding: 10px; 
+}
+
+`
+export const Eighty = styled.div`
+width: 60%;
+margin: auto;
 `

@@ -1,5 +1,5 @@
-import React, { FormEventHandler, useState } from 'react';
-import { Wrapper, Flex, Button, Form, Smal, Column, Conto } from '../Component/MyStyle.style';
+import { FormEventHandler, useState } from 'react';
+import { Wrapper, Flex, Button, Form, Smal, Column, Conto, Container } from '../Component/MyStyle.style';
 import Human from '../assets/Human.svg';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,11 +9,9 @@ const Categories = () => {
   const [BMI, setBMI] = useState('');
   const [height, setHeight] = useState<number>(0);
   const [weight, setWeight] = useState<number>(0);
-  const [open, setOpen] = useState(false)
 
-	const Back = ()=>{
-    setOpen(false)
-  }
+	
+  const navigate = useNavigate()
   const CalcBMI: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     
@@ -22,54 +20,25 @@ const Categories = () => {
     alert('invalid input')
   }
   else{
-    setOpen(true)
     let BMI = ( weight/(height/100) **2)
       setBMI(BMI.toFixed(2))
-
+      sessionStorage.setItem('user', JSON.stringify(BMI))
       if(BMI < 18.5){
-        setMessage('You are underweight')
-        setMessa(`This means you do not have enough body fat, and as such, are prone to malnutrition, decreased  muscle strength, low immunity and a lot more.
-        Health risks: 
-        Malnutrition.
-        Weak immune system.
-        Increased risk of fractures.
-        Nutrient deficiency.                      
-        see more...
-        
-        `)
+        navigate('/about')
       }
       else if(BMI >= 18.5 && BMI <= 24.5){
-        setMessage('You are helthy weight')
-        setMessa(`This means you do not have enough body fat, and as such, are prone to malnutrition, decreased  muscle strength, low immunity and a lot more.
-       <li> Health risks: </li>
-        Malnutrition.
-        Weak immune system.
-        Increased risk of fractures.
-        Nutrient deficiency.                      
-        
-        
-        `)
+        navigate('/product')
 
       }
-    else{
-        setMessage('You are Obesed')
-        setMessa(`This means you do not have enough body fat, and as such, are prone to malnutrition, decreased  muscle strength, low immunity and a lot more.
-        Health risks: 
-        Malnutrition.
-        Weak immune system.
-        Increased risk of fractures.
-        Nutrient deficiency.                      
-        see more...
-        
-        `)
+    else{  
+        navigate('/price')
       }
   }
-
-  
   };
 
   return (
     <Wrapper >
+      
       <h1>BMI (Body Mass Index) Calculator</h1>
       <Flex>
         <img src={Human} width={500} alt="human" />
@@ -116,18 +85,6 @@ const Categories = () => {
         </Form>
       </Flex>
 
-      <Conto style={{display: open ? 'flex': 'none'}}>
-        <div>
-          <small onClick={Back}>x</small>
-            <h1>Hello!</h1>
-            <p>Your BMI result says:{message}</p>
-            <h3>Your BMI is {BMI} </h3>
-            <p>{messa}</p>
-            <Button>See More</Button>
-        </div>
-        
-          
-      </Conto>
     </Wrapper>
   );
 };
