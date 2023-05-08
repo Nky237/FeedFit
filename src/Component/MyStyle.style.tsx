@@ -46,7 +46,9 @@ border-radius: 16px;
 border: 1px solid #74DDA0;
 color: #74DDA0;
 padding: 0 20px;
-
+@media(max-width: 760px){
+width: 400px;
+}
 
 `
 export const Flex = styled.div`
