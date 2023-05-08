@@ -1,5 +1,4 @@
 import Weighty from "../Component/Weighty";
-import Apple from '../assets/Logo.svg';
 import { Eighty } from "../Component/MyStyle.style";
 import Fat from '../assets/fat.svg'
 

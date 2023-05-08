@@ -4,8 +4,6 @@ import Human from '../assets/Human.svg';
 import { useNavigate } from 'react-router-dom';
 
 const Categories = () => {
-  const [message, setMessage] = useState('');
-  const [messa, setMessa] = useState('');
   const [BMI, setBMI] = useState('');
   const [height, setHeight] = useState<number>(0);
   const [weight, setWeight] = useState<number>(0);

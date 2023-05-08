@@ -1,4 +1,4 @@
-import { Footer, Wrapper } from "./MyStyle.style"
+import { Footer } from "./MyStyle.style"
 const Foot = () => {
   return (
     <Footer>
