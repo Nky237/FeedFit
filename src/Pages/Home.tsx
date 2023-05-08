@@ -7,6 +7,7 @@ import Test1 from '../assets/Tes1.svg'
 import Test2 from '../assets/Tes2.svg'
 import Test3 from '../assets/Tes3.svg'
 import Foot from "../Component/Footer"
+import { NavLink } from "react-router-dom"
 
 
 
@@ -30,7 +31,7 @@ const Home: React.FC = () => {
                 <p>Achieve your weight goals and improve your
                     overall health with our customized diet plans
                 tailored to your specific needs.</p>
-                <Button>Get Started</Button>
+                <NavLink to = 'menu'><Button>Get Started</Button></NavLink>
             </div>
             <img src = {Bg}  alt = 'bg' />
         </Flex>

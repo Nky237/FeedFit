@@ -1,5 +1,5 @@
 import { FormEventHandler, useState } from 'react';
-import { Wrapper, Flex, Button, Form, Smal, Column, Conto, Container } from '../Component/MyStyle.style';
+import { Wrapper, Flex, Button, Form, Smal, Column } from '../Component/MyStyle.style';
 import Human from '../assets/Human.svg';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ const Categories = () => {
     
 
   if(height === 0 || weight === 0){
-    alert('invalid input')
+    alert('invalid input' )
   }
   else{
     let BMI = ( weight/(height/100) **2)
@@ -82,7 +82,7 @@ const Categories = () => {
           </div>
         </Form>
       </Flex>
-
+      {BMI}
     </Wrapper>
   );
 };
