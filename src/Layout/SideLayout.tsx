@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Button } from '../Component/MyStyle.style'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineClose } from 'react-icons/md';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 interface Navyoo {
@@ -45,10 +45,21 @@ display: none;
   font-size: 35px;
 }
 `
+const Main = styled.div `
+position: relative;
+`
 
 const SideLayout = () => {
   const [showNavbar, setShowNavbar] = useState(false)
 
+  useEffect(() => {
+    const body = document.body;
+    if (showNavbar) {
+      body.style.overflowY = 'hidden';
+    } else {
+      body.style.overflowY = 'auto';
+    }
+  }, [showNavbar]);
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
   }
@@ -79,9 +90,9 @@ const SideLayout = () => {
         <NavLinkStyled to='/price' onClick={handleShowNavbar}>Pricing</NavLinkStyled>
         <NavLinkStyled to='/sign' onClick={handleShowNavbar}> <Button>Join Us </Button></NavLinkStyled>
       </MobileNav>
-      <main>
+      <Main>
         <Outlet />
-      </main>
+      </Main>
     </div>
   )
 }

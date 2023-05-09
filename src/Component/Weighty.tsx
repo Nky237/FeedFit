@@ -32,12 +32,18 @@ button{
 
 
 }
+
 @media (max-width: 768px) {
     button{
         width: 200px;
     }
  }
+
 `
+// const Relative = styled.div`
+// position: relative;
+// width: 100vh !important;
+// `
 const Weighty = ({image,head,head1,para1,para3,list1,list2,list3, list4, list5}: Warp) => {
     const [open, setOpen] = useState(false)
     const Close = ()=>{

@@ -90,11 +90,17 @@ export const Figure  = styled.div`
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     }
+    @media (max-width: 1027px){
+
+img{
+  width: 300px;
+}
+}
     @media(max-width: 460px){
         width: 200px; 
         height: 346px;
         img{
-            width: 200px; 
+            width: 250px; 
             height: 246px;
         }
     }
@@ -217,8 +223,8 @@ export const Column = styled.div`
     margin-top: 20px;
 `
 export const Conto = styled.div`
-height: 100vh;
-width: 100%;
+height: 100%;
+width: 100% !important;
 background-color: rgba(0,0,0,0.5);
 position: absolute;
 top: 0;
