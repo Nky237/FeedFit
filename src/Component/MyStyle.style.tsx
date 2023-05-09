@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 width: 100%;
+@media(max-width: 400px){
+    overflow-x: hidden;
+}
 `
 export const Wrapper = styled.div`
 width: 90%;
@@ -11,6 +14,7 @@ padding: 40px 0;
 h1{
     text-align: center;
 }
+
 `
 export const Wrap = styled(Wrapper) `
    p{
@@ -49,6 +53,9 @@ padding: 0 20px;
 @media(max-width: 760px){
 width: 400px;
 }
+@media(max-width: 460px){
+width: 200px;
+}
 
 `
 export const Flex = styled.div`
@@ -58,6 +65,7 @@ export const Flex = styled.div`
 
  @media (max-width: 768px) {
     flex-direction: column;
+
  }
 
 `
@@ -82,6 +90,14 @@ export const Figure  = styled.div`
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     }
+    @media(max-width: 460px){
+        width: 200px; 
+        height: 346px;
+        img{
+            width: 200px; 
+            height: 246px;
+        }
+    }
 
 
 `
@@ -97,6 +113,15 @@ line-height: 35.22px;
     img{
         height: 300px;
         width: 360px;
+    }
+    @media(max-width: 460px){
+            div{
+                width: 90%;
+            }
+        img{
+            width: 200px; 
+            height: 246px;
+        }
     }
 `
 export const LightGreen = styled.div`
@@ -153,6 +178,14 @@ label{
       width:  400px;
     }
     }
+@media(max-width: 460px){
+    input, select{
+        width: 260px;
+    }
+    button{
+      width:  260px;
+    }
+    }
 `
 export const Smal = styled.div`
 select{
@@ -168,10 +201,15 @@ select{
         margin-left: 10px;
     }
     }
+@media(max-width: 460px){
+ input{
+        width: 130px;
+    }
+    select{
 
-
-
-
+        margin-left: 10px;
+    }
+    }
 `
 export const Column = styled.div`
     display: flex;

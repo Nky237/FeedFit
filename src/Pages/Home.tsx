@@ -56,7 +56,7 @@ const Home: React.FC = () => {
                     <Wrapper>
                 <h1>What we do</h1>
                 <Small>
-                    <Eat image = {Info[0].image} head = {'Meal plan'} para = {'The ultimate tool to living a healthy life. Whether you want to lose weight, gain weight, or maintain a healthy weight, our app can help you reach your goals by providing personalized meal plans, nutrient tracking, recipe suggestions, progress tracking, support and motivation.'} />
+                    <Eat image = {Info[0].image} head = {'Meal plan'} para ={'The ultimate tool to living a healthy life. Whether you want to lose weight, gain weight, or maintain a healthy weight, our app can help you reach your goals by providing personalized meal plans, nutrient tracking, recipe suggestions, progress tracking, support and motivation.'} />
                     <Eat image = {Info[1].image} head = {'Nutrition made easy'} para = {'Eating healthy has never been simpler with our expert nutrition guides and convenient meal plans.'} />
                 </Small>
             </Wrapper>
